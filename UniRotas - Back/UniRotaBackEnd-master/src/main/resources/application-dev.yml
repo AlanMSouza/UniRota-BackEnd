@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: unirota
+
+  datasource:
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  private:
+    key: classpath:app.key
+  public:
+    key: classpath:app.pub
+
+pusher:
+  appId: 1861820
+  key: acf7b84d37b3b8e4070a
+  secret: ab8a99b4bee973b0a92e
+  cluster: us2
